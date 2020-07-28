@@ -6,10 +6,14 @@ import dadosIniciais from './components/data/dados_iniciais.json';
 import Footer from './components/Footer';
 function App() {
   return (
-    <div className="App">
+    <div style={{ background: '#141414' }} className="App">
       <Menu />
-      {/* <BannerMain /> */}
-      
+      <BannerMain
+        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
+        url={dadosIniciais.categorias[0].videos[0].url}
+        videoDescription={'O que é Front-End?'}
+      />
+
       <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]} />
 
       <Carousel ignoreFirstVideo category={dadosIniciais.categorias[1]} />
@@ -17,6 +21,11 @@ function App() {
       <Carousel ignoreFirstVideo category={dadosIniciais.categorias[2]} />
 
       <Carousel ignoreFirstVideo category={dadosIniciais.categorias[3]} />
+
+      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[4]} />
+
+      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[5]} />
+
       <Footer />
     </div>
   );
