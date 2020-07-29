@@ -7,6 +7,7 @@ function Footer() {
       <p>
         Desenvolvido por <a href="https://www.alura.com.br/">Henrique Baêta Leite</a>
       </p>
+      <a>Pizza Crek</a>
     </FooterBase>
   );
 }
