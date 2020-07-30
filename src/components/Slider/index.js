@@ -44,7 +44,7 @@ export const Slider = ({ children }) => (
       {...{
         dots: false,
         infinite: false,
-        speed: 300,
+        speed: 500,
         centerMode: false,
         variableWidth: true,
         adaptiveHeight: true,
