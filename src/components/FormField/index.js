@@ -1,12 +1,15 @@
 import React from 'react';
 
 const FormField = ({ type, name, value, onChange, label }) => {
+  const fieldId = `id_${name}`;
+
   if (type === 'textarea')
     return (
       <div>
-        <label>
+        <label htmlFor={fieldId}>
           {label}
           <textarea
+            id={fieldId}
             type={type}
             value={value}
             name={name}
@@ -18,9 +21,10 @@ const FormField = ({ type, name, value, onChange, label }) => {
     );
   return (
     <div>
-      <label>
+      <label htmlFor={fieldId}>
         {label}
         <input
+          id={fieldId}
           type={type}
           value={value}
           name={name}
