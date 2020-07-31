@@ -4,7 +4,7 @@ import './Menu.css';
 // import ButtonLink from './components/ButtonLink';
 import Button from '../Button/';
 
-const img = 'https://fontmeme.com/permalink/200729/a24ea23814304562aa4c6016d598b084.png';
+const img = 'https://fontmeme.com/permalink/200731/b3d6c734656518082f5bc3807743e54c.png';
 
 const Menu = () => {
   return (

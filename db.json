@@ -1,0 +1,16 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "meus Vídeos",
+      "descricao": "Minha categoria",
+      "cor": "#cbd1ff"
+    },
+    {
+      "id": 2,
+      "nome": "Back End",
+      "descricao": "outra categoria",
+      "cor": "#e5e5e5"
+    }
+  ]
+}

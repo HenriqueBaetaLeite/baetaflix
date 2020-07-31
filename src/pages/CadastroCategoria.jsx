@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageDefault from '../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../components/FormField';
+import Button from '../components/Button';
 
 const CadastroCategoria = () => {
   const valoresIniciais = {
@@ -27,6 +28,28 @@ const CadastroCategoria = () => {
     setValues(e.target.name, e.target.value);
   };
 
+  useEffect(() => {
+    console.log('oi');
+
+    setTimeout(() => {
+      setCategorias([
+        ...categorias,
+        {
+          id: 1,
+          nome: 'meus Vídeos',
+          descricao: 'Minha categoria',
+          cor: '#cbd1ff',
+        },
+        {
+          id: 2,
+          nome: 'Back End',
+          descricao: 'outra categoria',
+          cor: '#e5e5e5',
+        }
+      ]);
+    }, 2 * 1000);
+  }, []);
+
   return (
     <PageDefault>
       <h2>Cadastro de Categoria: {value.nome}</h2>
@@ -38,7 +61,7 @@ const CadastroCategoria = () => {
             name="nome"
             value={value.nome}
             onChange={handleChange}
-            label="Nome: "
+            label="Nome"
           />
 
           <FormField
@@ -46,7 +69,7 @@ const CadastroCategoria = () => {
             name="descricao"
             value={value.descricao}
             onChange={handleChange}
-            label="Descrição: "
+            label="Descrição"
           />
 
           <FormField
@@ -54,15 +77,20 @@ const CadastroCategoria = () => {
             name="cor"
             value={value.cor}
             onChange={handleChange}
-            label="Cor: "
+            label="Cor"
           />
         </div>
 
-        <button disabled={value.nome ? false : true} type="submit">
+        <Button disabled={value.nome ? false : true} type="submit">
           Cadastrar
-        </button>
+        </Button>
       </form>
 
+{categorias.length === 0 && (
+  <h3>
+    Loading...    
+  </h3>
+)}
       <ul>
         {categorias.map((cat, index) => (
           <div style={{ border: `2px solid ${cat.cor}` }} key={`${cat}${index}`}>
