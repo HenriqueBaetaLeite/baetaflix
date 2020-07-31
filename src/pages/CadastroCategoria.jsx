@@ -29,7 +29,9 @@ const CadastroCategoria = () => {
   };
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categorias/';
+    const url = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://baetaleiteflix.herokuapp.com/categorias';
 
     fetch(url).then(async (res) => {
       const resposta = await res.json();
