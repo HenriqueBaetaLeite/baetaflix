@@ -105,7 +105,7 @@ const CadastroCategoria = () => {
       <ul>
         {categorias.map((cat, index) => (
           <div style={{ border: `2px solid ${cat.cor}` }} key={`${cat}${index}`}>
-            <p>{cat.nome}</p>
+            <p>{cat.titulo}</p>
             {/* <p>{cat.descricao}</p>
             <p>{cat.cor}</p> */}
           </div>

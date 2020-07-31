@@ -2,7 +2,7 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "meus vídeos",
+      "titulo": "Meus vídeos",
       "cor": "#6BD1FF",
       "link_extra": {
         "text": "Meus vídeos 'favoritos'",
