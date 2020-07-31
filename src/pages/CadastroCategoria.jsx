@@ -29,12 +29,19 @@ const CadastroCategoria = () => {
   };
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categorias';
+    const url = 'http://localhost:8080/categorias/';
 
     fetch(url).then(async (res) => {
       const resposta = await res.json();
       setCategorias([...resposta]);
     });
+
+    // const getAPI = async () =>
+    //   await fetch(url).then((res) =>
+    //     res.json().then((data) => (res.ok ? Promise.resolve(data) : Promise.reject(data))),
+    //   );
+
+    // getAPI().then((data) => setCategorias(data));
 
     // setTimeout(() => {
     //   setCategorias([
@@ -96,7 +103,7 @@ const CadastroCategoria = () => {
       <ul>
         {categorias.map((cat, index) => (
           <div style={{ border: `2px solid ${cat.cor}` }} key={`${cat}${index}`}>
-            <li>{cat.nome}</li>
+            <p>{cat.nome}</p>
             {/* <p>{cat.descricao}</p>
             <p>{cat.cor}</p> */}
           </div>
