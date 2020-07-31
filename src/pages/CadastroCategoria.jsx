@@ -29,25 +29,30 @@ const CadastroCategoria = () => {
   };
 
   useEffect(() => {
-    console.log('oi');
+    const url = 'http://localhost:8080/categorias';
 
-    setTimeout(() => {
-      setCategorias([
-        ...categorias,
-        {
-          id: 1,
-          nome: 'meus Vídeos',
-          descricao: 'Minha categoria',
-          cor: '#cbd1ff',
-        },
-        {
-          id: 2,
-          nome: 'Back End',
-          descricao: 'outra categoria',
-          cor: '#e5e5e5',
-        }
-      ]);
-    }, 2 * 1000);
+    fetch(url).then(async (res) => {
+      const resposta = await res.json();
+      setCategorias([...resposta]);
+    });
+
+    // setTimeout(() => {
+    //   setCategorias([
+    //     ...categorias,
+    //     {
+    //       id: 1,
+    //       nome: 'meus Vídeos',
+    //       descricao: 'Minha categoria',
+    //       cor: '#cbd1ff',
+    //     },
+    //     {
+    //       id: 2,
+    //       nome: 'Back End',
+    //       descricao: 'outra categoria',
+    //       cor: '#e5e5e5',
+    //     },
+    //   ]);
+    // }, 2 * 1000);
   }, []);
 
   return (
@@ -86,17 +91,14 @@ const CadastroCategoria = () => {
         </Button>
       </form>
 
-{categorias.length === 0 && (
-  <h3>
-    Loading...    
-  </h3>
-)}
+      {categorias.length === 0 && <h3>Loading...</h3>}
+
       <ul>
         {categorias.map((cat, index) => (
           <div style={{ border: `2px solid ${cat.cor}` }} key={`${cat}${index}`}>
-            <p>{cat.nome}</p>
-            <p>{cat.descricao}</p>
-            <p>{cat.cor}</p>
+            <li>{cat.nome}</li>
+            {/* <p>{cat.descricao}</p>
+            <p>{cat.cor}</p> */}
           </div>
         ))}
       </ul>
