@@ -47,7 +47,7 @@
       "id": 1,
       "categoriaId": 1,
       "titulo": "Lassance Radical",
-      "url": "https://www.youtube.com/watch?v=DGGDjknjxB4&t=1s"  
+      "url": "https://www.youtube.com/watch?v=DGGDjknjxB4&t=1s"
     },
     {
       "id": 2,
@@ -174,6 +174,12 @@
       "categoriaId": 5,
       "titulo": "Trybe",
       "url": "https://www.youtube.com/watch?v=Lf-m1puDxZs"
+    },
+    {
+      "titulo": "Video padrão",
+      "url": "https://www.youtube.com/watch?v=OFHAIpw2oZI",
+      "categoriaId": 1,
+      "id": 25
     }
   ]
 }

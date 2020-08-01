@@ -3,29 +3,23 @@ import PageDefault from '../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../components/FormField';
 import Button from '../components/Button';
+import useForm from '../hooks/useForm';
 
 const CadastroCategoria = () => {
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '#000',
   };
 
+  const { handleChange, value, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [value, setValue] = useState(valoresIniciais);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setCategorias([...categorias, value]);
-    setValue(valoresIniciais);
-  };
-
-  const setValues = (key, values) => {
-    setValue({ ...value, [key]: values });
-  };
-
-  const handleChange = (e) => {
-    setValues(e.target.name, e.target.value);
+    clearForm(valoresIniciais);
   };
 
   useEffect(() => {
@@ -50,13 +44,13 @@ const CadastroCategoria = () => {
     //     ...categorias,
     //     {
     //       id: 1,
-    //       nome: 'meus Vídeos',
+    //       titulo: 'meus Vídeos',
     //       descricao: 'Minha categoria',
     //       cor: '#cbd1ff',
     //     },
     //     {
     //       id: 2,
-    //       nome: 'Back End',
+    //       titulo: 'Back End',
     //       descricao: 'outra categoria',
     //       cor: '#e5e5e5',
     //     },
@@ -66,14 +60,14 @@ const CadastroCategoria = () => {
 
   return (
     <PageDefault>
-      <h2>Cadastro de Categoria: {value.nome}</h2>
+      <h2>Cadastro de Categoria: {value.titulo}</h2>
 
       <form onSubmit={handleSubmit}>
         <div>
           <FormField
             type="text"
-            name="nome"
-            value={value.nome}
+            name="titulo"
+            value={value.titulo}
             onChange={handleChange}
             label="Nome"
           />
@@ -95,7 +89,7 @@ const CadastroCategoria = () => {
           />
         </div>
 
-        <Button disabled={value.nome ? false : true} type="submit">
+        <Button disabled={value.titulo ? false : true} type="submit">
           Cadastrar
         </Button>
       </form>
@@ -106,8 +100,8 @@ const CadastroCategoria = () => {
         {categorias.map((cat, index) => (
           <div style={{ border: `2px solid ${cat.cor}` }} key={`${cat}${index}`}>
             <p>{cat.titulo}</p>
-            {/* <p>{cat.descricao}</p>
-            <p>{cat.cor}</p> */}
+            <p>{cat.descricao}</p>
+            <p>{cat.cor}</p>
           </div>
         ))}
       </ul>
