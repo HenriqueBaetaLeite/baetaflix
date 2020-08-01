@@ -8,12 +8,13 @@ import videosRepository from '../repositories/videos';
 import categoriasRepository from '../repositories/categorias';
 
 const CadastroVideo = () => {
-  const [categorias, setCategorias] = useState();
+  const [categorias, setCategorias] = useState([]);
+  const categoryTitle = categorias.map((cat) => cat.titulo);
   const history = useHistory();
   const { handleChange, value } = useForm({
     titulo: 'Video padrão',
     url: 'https://www.youtube.com/watch?v=OFHAIpw2oZI',
-    categoria: 'DevEd',
+    categoria: 'Back End',
   });
 
   useEffect(() => {
@@ -21,17 +22,26 @@ const CadastroVideo = () => {
       setCategorias(categ);
     });
   }, []);
+  console.log(
+    'categorias: ',
+    categorias.find((el) => el.titulo === 'Meus vídeos'),
+  );
+
+  const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === value.categoria);
+
   return (
     <PageDefault>
       <h2>Cadastro de Vídeo</h2>
       <form
         onSubmit={(event) => {
           event.preventDefault();
+
+          console.log('categoria escolhida', categoriaEscolhida);
           videosRepository
             .createVideos({
               titulo: value.titulo,
               url: value.url,
-              categoriaId: 1,
+              categoriaId: categoriaEscolhida.id,
             })
             .then(() => {
               console.log('Vídeo cadastrado com sucesso!');
@@ -52,6 +62,7 @@ const CadastroVideo = () => {
           name="categoria"
           value={value.categoria}
           onChange={handleChange}
+          suggestions={categoryTitle}
         />
 
         <Button type="submit">Cadastrar</Button>
