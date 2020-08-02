@@ -12,9 +12,9 @@ const CadastroVideo = () => {
   const categoryTitle = categorias.map((cat) => cat.titulo);
   const history = useHistory();
   const { handleChange, value } = useForm({
-    titulo: 'Video padrão',
-    url: 'https://www.youtube.com/watch?v=OFHAIpw2oZI',
-    categoria: 'Back End',
+    titulo: '',
+    url: '',
+    categoria: '',
   });
 
   useEffect(() => {
@@ -22,10 +22,6 @@ const CadastroVideo = () => {
       setCategorias(categ);
     });
   }, []);
-  console.log(
-    'categorias: ',
-    categorias.find((el) => el.titulo === 'Meus vídeos'),
-  );
 
   const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === value.categoria);
 
@@ -36,7 +32,6 @@ const CadastroVideo = () => {
         onSubmit={(event) => {
           event.preventDefault();
 
-          console.log('categoria escolhida', categoriaEscolhida);
           videosRepository
             .createVideos({
               titulo: value.titulo,

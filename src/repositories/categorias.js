@@ -3,7 +3,7 @@ import config from '../config';
 const URL_categories = `${config.url}/categorias`;
 
 const getAll = () => {
-  return fetch(`${URL_categories}`).then(async (resp) => {
+  return fetch(URL_categories).then(async (resp) => {
     if (resp.ok) {
       const resposta = await resp.json();
       return resposta;

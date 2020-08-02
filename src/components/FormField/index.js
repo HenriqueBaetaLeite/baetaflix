@@ -97,7 +97,7 @@ const FormField = ({ type, name, value, onChange, label, suggestions }) => {
         <Label.Text>{label}</Label.Text>
         {hasSuggestions && (
           <datalist id={`suggestionFor_${fieldId}`}>
-            {suggestions.map((suggestion, index) => (
+            {suggestions.map((suggestion) => (
               <option key={`index${suggestion}`} value={suggestion}>
                 {suggestion}
               </option>

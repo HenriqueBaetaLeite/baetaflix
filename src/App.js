@@ -7,7 +7,6 @@ import categoriasRepository from './repositories/categorias';
 function App() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
   useEffect(() => {
-    // http://localhost:8080/categorias?_embed=videos
     categoriasRepository
       .getAllWithVideos()
       .then((categ) => {
