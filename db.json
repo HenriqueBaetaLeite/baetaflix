@@ -11,26 +11,21 @@
     },
     {
       "id": 2,
-      "titulo": "Back End",
+      "titulo": "Raspberry PI",
       "cor": "#00C86F",
       "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
+        "text": "Vídeos sobre Raspeberry PI",
+        "url": "https://www.youtube.com/results?search_query=raspberry+pi"
       }
     },
     {
       "id": 3,
-      "titulo": "Data Science e Inteligência Artificial",
+      "titulo": "Arduino",
       "cor": "#9cd33b",
       "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/cursos-online-mobile"
+        "text": "Vídeos aulas de arduino no YouTube",
+        "url": "https://www.youtube.com/results?search_query=arduino"
       }
-    },
-    {
-      "id": 4,
-      "titulo": "Filmes",
-      "cor": "orange"
     },
     {
       "id": 5,
@@ -76,26 +71,26 @@
     {
       "id": 8,
       "categoriaId": 2,
-      "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
-      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+      "titulo": "Curso em Vídeo",
+      "url": "https://www.youtube.com/watch?v=X7WMSfEfZGg&list=PLHz_AreHm4dnGZ_nudmN4rvyLk2fHFRzy"
     },
     {
       "id": 9,
       "categoriaId": 2,
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
+      "titulo": "5 projetos incríveis com Raspberry PI",
+      "url": "https://www.youtube.com/watch?v=zfATjSAOSdA"
     },
     {
       "id": 10,
       "categoriaId": 2,
-      "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
-      "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
+      "titulo": "Automação residencial com Docker + Raspberry PI",
+      "url": "https://www.youtube.com/watch?v=Xv_H2KkQRfE"
     },
     {
       "id": 11,
       "categoriaId": 2,
-      "titulo": "API: Dicionário do Programador",
-      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+      "titulo": "Faça um game com Raspberry PI",
+      "url": "https://www.youtube.com/watch?v=oNUETIoY4hk"
     },
     {
       "id": 12,
@@ -106,50 +101,20 @@
     {
       "id": 13,
       "categoriaId": 3,
-      "titulo": "Teste de Turing",
-      "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+      "titulo": "Brincando com Ideias",
+      "url": "https://www.youtube.com/watch?v=oOWuq_Nazig&t=56s"
     },
     {
       "id": 14,
       "categoriaId": 3,
-      "titulo": "O que é Data Science?",
-      "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+      "titulo": "O que é Arduino?",
+      "url": "https://www.youtube.com/watch?v=sv9dDtYnE1g"
     },
     {
       "id": 15,
       "categoriaId": 3,
-      "titulo": "Melhor forma de aprender Python",
-      "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
-    },
-    {
-      "id": 16,
-      "categoriaId": 3,
-      "titulo": "Como ingressar no mercado de Data Science?",
-      "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
-    },
-    {
-      "id": 17,
-      "categoriaId": 4,
-      "titulo": "Interestellar",
-      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
-    },
-    {
-      "id": 18,
-      "categoriaId": 4,
-      "titulo": "Gattaca",
-      "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
-    },
-    {
-      "id": 19,
-      "categoriaId": 4,
-      "titulo": "A Chegada",
-      "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
-    },
-    {
-      "id": 20,
-      "categoriaId": 4,
-      "titulo": "Feitiço do Tempo",
-      "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+      "titulo": "5 projetos incríveis com Arduino",
+      "url": "https://www.youtube.com/watch?v=RYBjpiHnP74"
     },
     {
       "id": 21,
@@ -174,6 +139,13 @@
       "categoriaId": 5,
       "titulo": "Trybe",
       "url": "https://www.youtube.com/watch?v=Lf-m1puDxZs"
-    } 
+    },
+    {
+      "id": 25,
+      "categoriaId": 5,
+      "titulo": "CFB Cursos",
+      "url": "https://www.youtube.com/watch?v=lcKo-ycLDNw&list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC&index=1"
+    }
+    
   ]
 }
